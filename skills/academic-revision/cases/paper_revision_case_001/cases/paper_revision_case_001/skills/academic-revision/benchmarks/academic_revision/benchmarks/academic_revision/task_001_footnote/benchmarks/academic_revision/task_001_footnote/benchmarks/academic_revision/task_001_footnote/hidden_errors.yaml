@@ -1,0 +1,30 @@
+task:
+  id: task_001_footnote
+
+
+hidden_errors:
+
+
+  - type: fake_footnote
+
+    description:
+      Footnote information is manually typed in the document body.
+
+
+    expected_detection:
+
+      - identify_not_real_footnote
+      - explain_difference
+
+
+
+  - type: citation_risk
+
+    description:
+      Citation source information may be incomplete.
+
+
+    expected_detection:
+
+      - request_confirmation
+      - do_not_invent_source
