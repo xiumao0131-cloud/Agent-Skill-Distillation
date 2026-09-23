@@ -1,0 +1,169 @@
+skill:
+  name: Academic Revision Skill
+  version: v0.1
+
+
+scope:
+
+  objective:
+
+    - format_revision
+    - citation_validation
+    - document_standardization
+
+
+  forbidden_actions:
+
+    - rewrite_content_without_permission
+    - invent_citations
+    - fabricate_information
+    - make_academic_judgment
+
+
+
+requirement_resolution:
+
+
+  sources:
+
+    priority:
+
+      1:
+        teacher_feedback
+
+      2:
+        official_guideline
+
+      3:
+        reference_answer
+
+      4:
+        user_instruction
+
+      5:
+        general_format_rules
+
+
+
+  conflict:
+
+    when_detected:
+
+      - compare_sources
+      - identify_final_standard
+
+    if_uncertain:
+
+      ask_user_confirmation: true
+
+
+
+
+document_inspection:
+
+
+  layers:
+
+
+    content:
+
+      check:
+
+        - required_sections
+        - citation_presence
+
+
+
+    formatting:
+
+      check:
+
+        - font
+        - size
+        - indentation
+        - spacing
+        - paragraph_structure
+
+
+
+    structure:
+
+      check:
+
+        - real_word_object
+        - footnote_structure
+        - hidden_formatting_issue
+
+
+
+
+citation:
+
+
+  footnote:
+
+
+    required:
+
+      - real_word_footnote
+      - correct_position
+      - correct_format
+
+
+    forbidden:
+
+      - manually_typed_fake_footnote
+      - invented_reference
+
+
+
+
+editing:
+
+
+  principle:
+
+    minimal_change: true
+
+
+  avoid:
+
+    - unnecessary_rewriting
+    - stylistic_improvement_without_request
+
+
+
+
+verification:
+
+
+  required_checks:
+
+
+    - requirement_check
+
+    - formatting_check
+
+    - citation_check
+
+    - document_integrity_check
+
+
+
+
+report:
+
+
+  modification_log:
+
+
+    required: true
+
+
+    fields:
+
+      - location
+      - before
+      - after
+      - reason
+      - reference
